@@ -1,7 +1,7 @@
 // Initialize EmailJS
 (function() {
     // TODO: Replace with your EmailJS public key
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("V2WyHpexMnTyfSBPT");
 })();
 
 // Form Submission
@@ -18,15 +18,15 @@ if (contactForm) {
 
         // Prepare the template parameters
         const templateParams = {
-            from_name: this.querySelector('input[type="text"]').value,
-            from_email: this.querySelector('input[type="email"]').value,
+            name: this.querySelector('input[type="text"]').value,
+            email: this.querySelector('input[type="email"]').value,
             phone: this.querySelector('input[type="tel"]').value,
             message: this.querySelector('textarea').value
-        };
+          };          
 
         // Send the email
         // TODO: Replace with your service ID and template ID
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_2jht58e', 'template_w9kmvrf', templateParams)
             .then(function() {
                 // Show success message
                 alert('Thank you for your message! We will get back to you soon.');
